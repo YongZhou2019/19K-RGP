@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -N abcd	### 16 samples per node, i.e., Nodes = Ceil (no. of FR.fastq.gz/24), 2674/24=111.41, 112 nodes 
+#SBATCH --partition=workq
+#SBATCH -A k10069
+#SBATCH -J Phase1
+#SBATCH --error=logs/Phase1_%J.err   ### edit batch
+#SBATCH --output=logs/Phase1_%J.out  ### edit batch
+#SBATCH --time=23:50:00
+#SBATCH --cpus-per-task=8
+
+### Software modules
+export MODULEPATH=/scratch/project/software/ex111genoa/modulefiles:$MODULEPATH
+module load bio/bwa/0.7.17
+module load bio/java/21.0.2 #bio/java/8u401
+module load bio/samtools/1.18 #bio/samtools/1.8 
+module load bio/gatk/4.1.6
+module load bio/tabix/0.2.6 
+
+genome=gggg  ### modify reference genome;!!!
+
+srun --hint=nomultithread --ntasks=abcde ./Phase1.exe    ### modify the number of tasks
+

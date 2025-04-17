@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -N abcd   ### 24 samples per node ### change Parameter1, normally don't change
+#SBATCH --partition=workq   ## 72hours
+#SBATCH -A k10069
+#SBATCH -J Phase2c
+#SBATCH --error=logs/Phase2c_%J.err   ### edit batch
+#SBATCH --output=logs/Phase2c_%J.out  ### edit batch
+#SBATCH --time=23:50:00
+
+### Software modules
+### module load samtools/1.8 gatk/4.1.6.0 tabix/0.2.6 - this is missing
+# module av -S
+
+export MODULEPATH=/scratch/project/software/ex111genoa/modulefiles:$MODULEPATH
+
+module load bio/bwa/0.7.17
+module load bio/samtools/1.8  #bio/samtools/1.18 
+module load bio/gatk/4.1.6
+module load bio/tabix/0.2.6
+
+srun --hint=nomultithread --ntasks=abcde ./Phase2.exe  ### change Parameter3, normally don't change
+

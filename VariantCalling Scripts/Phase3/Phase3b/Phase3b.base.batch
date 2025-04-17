@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH -N abcd  # 4 samples per node #24samples per noamples e | 182 ### 32 samples per node
+#SBATCH --partition=workq
+#SBATCH -A k10069  ## #k01
+#SBATCH -J P3b
+#SBATCH --error=logs/Phase3_%J.err
+#SBATCH --output=logs/Phase3_%J.out
+#SBATCH --time=23:50:00
+
+### Software modules
+
+#export MODULEPATH=/scratch/project/software/ex109genoa/modulefiles:$MODULEPATH
+export MODULEPATH=/scratch/project/software/ex111genoa/modulefiles:$MODULEPATH
+
+module load bio/bwa/0.7.17
+module load bio/samtools/1.18  #bio/samtools/1.18 
+module load bio/gatk/4.1.6
+module load bio/tabix/0.2.6
+module load bio/java/21.0.2 #bio/java/8u401
+
+srun --hint=nomultithread --ntasks=abcde ./Phase3.exe
+
+

@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -N yyyy ##yyyy = #chrs, nodes for merging? ### 32 samples per node
+#SBATCH --partition=workq
+#SBATCH -A k10069 #k1514  #k1671  #k01
+#SBATCH -J Phase4
+#SBATCH --error=logs/Phase4_%J.err
+#SBATCH --output=logs/Phase4_%J.out
+#SBATCH --time=15:00:00
+
+### Software modules
+export MODULEPATH=/scratch/project/software/ex111genoa/modulefiles:$MODULEPATH
+module load bio/bwa/0.7.17
+module load bio/samtools/1.18  #bio/samtools/1.18 
+module load bio/gatk/4.1.6
+module load bio/tabix/0.2.6
+module load bio/java/21.0.2 #bio/java/8u401
+
+## Variables
+genome=gggg
+
+srun --hint=nomultithread --ntasks=xxxx ./Phase4.exe ###xxxx only 1 task will be required? 
+
