@@ -39,7 +39,7 @@ rm $GWASPgapit/QC4.tmp.hmp.txt
 sed -i 's/0_IRGC/IRGC/g' $GWASPgapit/QC4.hmp.txt 
 
 #### GWAS   ###
-cat /ibex/scratch/projects/c2028/keerthana/13K/GWASresults/Grainlength/$genome/GWAS_scripts/Rscripts/QC4withPC_K_3000.r | sed "s/PPPPP/$TRAIT/g" > $GWASPgapit/QC4withPC_K.r
+cat /ibex/scratch/projects/c2028/keerthana/13K/GWASresults/Grainlength/$genome/GWAS_scripts/Rscripts/QC4withPC_K.r | sed "s/PPPPP/$TRAIT/g" > $GWASPgapit/QC4withPC_K.r
 cd $GWASPgapit/
 export OMP_NUM_THREADS=32
 Rscript QC4withPC_K.r
