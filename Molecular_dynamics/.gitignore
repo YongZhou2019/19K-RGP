@@ -1,0 +1,162 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# GROMACS / MD Simulation Files (LARGE)
+*.xtc
+*.trr
+*.tpr
+*.edr
+*.log
+*.cpt
+*.gro
+*.pdb
+*.g96
+*.top
+*.itp
+*.mdp
+*.tng
+*.part????.*
+\#*\#
+step*.pdb
+confout.gro
+mdout.mdp
+state.cpt
+state_prev.cpt
+ener.edr
+traj.xtc
+traj_comp.xtc
+md.log
+pullx.xvg
+pullf.xvg
+
+# AlphaFold2 / Structure Prediction (keep small files, exclude large)
+*.a3m
+*.sto
+*.hhr
+features.pkl
+unrelaxed_model_*.pdb
+ranked_*.pdb
+result_model_*_multimer_*.pkl
+timings.json
+msas/
+**result_model_*_pred_0.pkl
+
+# Large data directories (adjust paths to your structure)
+data/raw/trajectories/
+data/raw/checkpoints/
+# data/interim/PDB_to_MD/*/run*/
+data/interim/PDB_to_MD/*/*/*.xtc
+data/interim/PDB_to_MD/*/*/*.trr
+data/interim/PDB_to_MD/*/*/*.tpr
+data/interim/PDB_to_MD/*/*/*.edr
+data/interim/PDB_to_MD/*/*/*.log
+data/interim/PDB_to_MD/*/*/*.cpt
+data/interim/PDB_to_MD/*/*/*.run
+data/interim/PDB_to_MD/*/*/*.txt
+
+data/interim/PDB_to_MD/CBL8_mut_CIPK17_mut_NAC77_mut
+data/interim/PDB_to_MD/CBL8_mut_CIPK17_mut_NAC77_ref
+data/interim/PDB_to_MD/CBL8_mut_CIPK17_ref_NAC77_mut
+data/interim/PDB_to_MD/CBL8_ref_CIPK17_mut_NAC77_mut
+data/interim/PDB_to_MD/CBL8_ref_CIPK17_ref_NAC77_ref
+data/interim/PDB_to_MD/CBL8_reference_vs_CIPK17_ref
+data/interim/PDB_to_MD/CBL8_HAP6_Freq.3062_vs_CIPK17_reference
+data/interim/PDB_to_MD/CBL8_HAP2_Freq.12_vs_CIPK17_ref
+
+# Exclude large XVG files (optional - comment out if you want to keep them)
+# *.xvg
+
+# Keep specific small analysis files (whitelist exceptions)
+!**/rmsf*.xvg
+!**/gyrate*.xvg
+!**/energy*.xvg
+!**/mindist*.xvg
+!**/hbond*.xvg
+
+# BUT keep specific analysis XVG files in PDB_to_MD
+!data/interim/PDB_to_MD/*/*.xvg
+!data/interim/PDB_to_MD/*/*/*.xvg
+
+# Index files and selections (usually small, but optional)
+# *.ndx
+
+# Images and figures (keep)
+!**/*.png
+!**/*.svg
+!**/*.pdf
+!**/*.jpg
+
+# Results and reports (keep)
+!data/interim/results/*.csv
+!data/interim/figures/*
+!notebooks/*.ipynb
+!src/*.py
+!*.md
+!*.txt
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# OS generated files
+Thumbs.db
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Compressed archives (optional - uncomment if you want to exclude)
+# *.tar.gz
+# *.zip
+# *.tar
+# *.bz2
+
+**/.DS_Store
+**.out
+**.aux
+**.log
+**.err
+**.cif
+**.json
+**.gif
+**.docx
+**.zip
+## pytorch pretrained weights
+*.pth
+*.pt
+**TERMS**
+*.pse
+
+# Evo2 files
+**.distcp
+
+notebooks/brca1/GRCh37.p13_chr17.fna.gz
