@@ -3,6 +3,7 @@
 # Title: submit_elai_jobs.sh
 # Description: This script iterates through a list of chromosomes, and for each one,
 # it generates and submits separate analysis jobs for multiple admixed populations.
+# Author: Wen Zhao
 
 # --- Configuration ---
 
