@@ -4,6 +4,7 @@
 # Description: Create individual population list files from a population mapping file,
 #              expanding each sample into two haplotype IDs for ELAI analysis.
 # Usage: bash create_list.sh <input_population_file.txt>
+# Author: Wen Zhao
 
 # --- Configuration ---
 set -e
