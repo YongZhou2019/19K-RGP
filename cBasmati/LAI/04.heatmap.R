@@ -6,7 +6,7 @@
 # 功能: 读取已按亚群分割的 SNP 祖源文件 (例如 cBas-1A.txt, cB-2.txt)，
 #       合并数据，并用 ComplexHeatmap 绘制热图。
 #       (版本3: 自动从文件名推断亚群)
-#
+# Author: Wen Zhao
 
 # 1. 加载所需包
 suppressPackageStartupMessages({
