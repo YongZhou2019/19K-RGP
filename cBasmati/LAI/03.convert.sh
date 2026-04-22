@@ -5,6 +5,7 @@
 #              (.ps21.txt and .snpinfo.txt) into a heatmap-ready matrix format.
 #              It iterates through all directories starting with 'chr', and for each,
 #              processes the results for a predefined list of admixed groups.
+# Author: Wen Zhao
 
 # --- Configuration ---
 
