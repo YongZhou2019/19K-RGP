@@ -1,4 +1,4 @@
-# AI-driven Predictive Phenotype Modeling
+# Machine learning-based Predictive Phenotype Modeling
 
 ## Project Overview
 
